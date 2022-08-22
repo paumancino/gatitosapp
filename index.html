@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App de Gatitos</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Dosis:wght@500&family=Montserrat:ital,wght@0,100;0,200;0,300;1,100&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h2 id="titulo-app-gatos">Página de gatitos</h2>
+    <main>
+      <h3>Imágenes de gatitos:</h3>
+      <!-- TO DO: Agregar enlace a imagenes de gatos-->
+      <p>Haz click aquí para ver más<a href="https://www.google.com/search?q=imagenes+de+gatos&rlz=1C1CHBD_esAR909AR909&sxsrf=ALiCzsZ_M8Ac-IrzGZlTDlA3BHRzKtMRog:1661175804221&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjG8-CNytr5AhUypZUCHfNkCgIQ_AUoAXoECAEQAw&biw=1536&bih=760&dpr=1.25" target="_blank"> imágenes de gatos.</a></p>
+
+      <a
+        href="https://www.elmundodelgato.com/"
+        target="_blank"
+        rel="nooponer noreferrer"
+      >
+      <div class="fila-centrada">
+         <img
+          src="https://bit.ly/fcc-relaxing-cat"
+          class="bordes-redondeados"
+          alt="un gatito naranja acostado mirando a la camara"
+      /></a>
+
+      <img src="imagenes/gatito-2.png" alt="una imagen de gatito" class="bordes-redondeados">
+      <img src="imagenes/gatito-3.webp" alt="una imagen de gatito" class="bordes-redondeados">
+      </div>
+       
+
+      <hr />
+
+      <h3>Listas de gatos</h3>
+
+      <div class="contenedor-2">
+         <div class="fila-centrada">
+
+      <div key="lista-1" class="gatos-detalles">
+        <ul id="lista-gatos-aman"> 
+          <p>Cosas que los gatos <em>aman</em>:</p>
+          <li>Afilarse las uñas</li>
+          <li><s>Dormir</s></li>
+          <li>Sobrecito Whiskas</li>
+        </ul>
+        <img
+      src="Imagenes/gatito-4.jpg"
+      class="bordes-redondeados imagen-listas"
+      alt="Un gatito sonriendo"
+    />
+      </div>
+        
+      <div key="lista-2" class="gatos-detalles">
+        <ol id="lista-gatos-odian">
+          <p>Cosas que los gatos <strong>odian</strong>:</p>
+          <li>Bañarse</li>
+          <li>Truenos</li>
+          <li>Otros gatos</li>
+        </ol>
+        <img src="imagenes/gatito-5.jpg" alt="Un gatito enojado" class="bordes-redondeados imagen-listas">
+      </div>
+      </div> 
+      
+    
+      </div>
+      <div class="gatos-detalles">
+        <h3>¿Dónde vive tu gatito?</h3>
+      <form action="/enviar-respuesta">
+        <!--Botones de Radio-->
+        <label for="interior"
+          ><input
+            type="radio"
+            id="interior"
+            name="interior-exterior"
+            checked
+            value="interior"
+          />Interior</label
+        >
+        <br />
+        <label for="exterior"
+          ><input
+            type="radio"
+            id="exterior"
+            name="interior-exterior"
+            value="exterior"
+          />Exterior</label
+        >
+        <br />
+        <h3>Tu gatito es...</h3>
+        <!--Casillas de verificacion-->
+        <label for="carinoso"
+          ><input
+            type="checkbox"
+            id="carinoso"
+            name="personalidad"
+            checked
+            value="carinoso"
+          />Cariñoso</label
+        >
+        <br />
+        <label for="perezoso"
+          ><input
+            type="checkbox"
+            id="perezoso"
+            name="personalidad"
+            value="perezoso"
+          />Perezoso</label
+        >
+        <br />
+        <label for="energico"
+          ><input
+            type="checkbox"
+            id="energico"
+            name="personalidad"
+            value="energico"
+          />Enérgico</label
+        >
+        <br />
+      </div>
+     
+        <!--Texto y Boton Enviar-->
+      
+        <div class="enlace-boton">   
+          <h3> ♥ Enviar foto de tu gatito ♥</h3>
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="URL de la foto de tu gato"
+          required
+        />
+        <br />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    </main>
+    <footer>
+      <p>
+        <small
+          >♥ Sin derechos de Autor ♥
+          <a href="https://www.elmundodelgato.com/" target="_blank"
+            >El Mundo Del Gato</a
+          ></small
+        >
+      </p>
+    </footer>
+   </body>
+</html>

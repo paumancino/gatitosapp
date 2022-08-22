@@ -1,0 +1,111 @@
+#titulo-app-gatos {
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#lista-gatos-aman {
+font-size: 18px;
+font-family: 'Dosis', sans-serif;
+}
+
+#lista-gatos-odian {
+font-size: 18px;
+font-family: 'Dosis', sans-serif;
+}
+
+h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+}
+
+p {
+  font-family: 'Dosis', sans-serif;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+a {
+  font-family: 'Dosis', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  color: #2C115E;
+}
+
+
+.bordes-redondeados {
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  border: #D6CDE9;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.fila-centrada {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+[type="radio"] {
+margin: 10px;
+}
+
+[type="checkbox"] {
+  margin: 8px;
+}
+
+body {
+  margin-bottom: 0;
+  background-color: #80689D;
+  color: #F3E6ED;
+}
+
+.contenedor-2 {
+  background-color: #2C115E;
+  padding: 0vw 0 2vw 0;
+}
+
+.gatos-detalles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-listas {
+  width: 10vw !important;
+  height: 10vw !important;
+}
+
+footer {
+  background-color: #D6CDE9;
+  color: #80689D;
+}
+
+button {
+  color: #2C115E;
+  background-color: #D6CDE9;
+  font-family: 'Dosis', sans-serif;
+  width: 100px;
+  height: 30px;
+  border: 2px solid #4b3467;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.enlace-boton {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #2C115E;
+  color: #D6CDE9;
+}

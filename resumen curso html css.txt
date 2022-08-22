@@ -1,0 +1,468 @@
+HTML: 
+
+Significa: Hypertext Markup Language (lenguaje de marcado de hipertexto). Es el lenguaje
+que nos permite DEFINIR la estructura de una pagina web.
+
+Se escribe HTML en un archivo con la extension .html 
+
+CSS:
+
+Significa: Cascading Style Sheets (hojas de estilo en cascada). Lo usamos para DEFINIR la 
+presentacion que definimos en HTML. 
+
+Se escribe en un archivo CSS con la extension .css
+
+JAVASCRIPT: 
+
+Es un lenguaje de programacion que nos permite añadir funcionalidad a nuestra pagina web, 
+hacer que la pagina web sea interactiva.
+
+Se escribe en un archivo javascript con la extension .js
+
+**Estos componentes se almacenan en archivos separados y se conectan entre si**
+
+
+EDITORES DE CODIGO: VSC, ATOM
+
+
+DEFINICIONES:
+
+**Elemento**: Es un componente basico de un archivo HTML. Usamos elementos para definir la
+estructura de una pagina web en un archivo HTML. En ingles = element.
+**Etiquetas**: Las etiquetas nos permiten definir los elementos en un archivo HTML. Basicamente, las etiquetas son las formas de escribir esos elementos en un archivo. Especifican el tipo de elemento que se va a crear. En ingles = Tag.
+
+Ejemplos de etiquetas: <html> <head> <body>
+
+
+Estructura de etiqueta: Parentesis angular que abre la etiqueta, dentro de los parentesis el tipo de elemento y luego el cierre con el parentesis angular. La mayoria de los elementos en HTML requieren dos etiquetas, una etiqueta de apertura, que sigue la estructura antes mencionada y una etiqueta de cierre, en la que se agrega un "/" antes del tipo de elemento.
+Ejemplo de cierre: 
+</body>
+Esta estructura nos permite delimitar el contenido de ese elemento. 
+Algunos elementos no necesitan etiquetas de cierre, en ingles nos referimos a estas etiquetas como Self-closing tags (etiquetas que se cierran solas), por ejemplo la etiqueta <img>. Opcionalmente se puede agregar la barra "/" al final de la etiqueta: <img  /> 
+
+
+**Con alt + z el codigo se adapta al tamaño de la ventana**
+
+CREAR UN ARCHIVO HTML: 
+
+Elegimos la carpeta dentro del VSC, y clickeamos en el icono de crear nuevo archivo y elegimos el nombre, por estandar se puede nombrar "index.html"
+
+La primera linea de codigo que escribiremos es una declaracion que nos permite decirle
+al navegador cual es la version de HTML que usaremos: <!DOCTYPE html>
+
+Segun MDN Web Docs: Doctype informa al navegador que version de HTML se uso para escribir
+el documento. Doctype es una declaracion NO una etiqueta. Ademas, podemos referirnos a ella como "document type declaration" o por las siglas "DTD".
+
+Luego, el segundo elemento que agregariamos seria el elemento <html></html> que tambien se conoce como el "elemento raiz", todos los demas elementos que van a formar parte de nuestra pagina tiene que ir dentro de este elemento principal.
+Dentro del elemento html tenemos dos elementos más, el primero es <head></head> y el segundo es <body></body>. Los elementos dentro del elemento head son elementos que "actuan detras de escena", es decir son importantes pero no forman la estructura principal de la pagina, aqui se incluye cualquier archivo externo que necesite la pagina, como .css o .js y tambien podemos personalizar el titulo de la pagina. En el elemento body se define la estructura de la pagina. Si omitimos head, el navegador lo agrega automaticamente.
+
+
+INDENTACION: El espacio que hay dentro de etiquetas funcionalmente no tienen un impacto en HTML, es decir la pagina se presenta de igual forma, pero siempre se deberia agregar un nivel de identacion a cada uno de los elementos que se van anidando, asi se puede ver facilmente la jerarquia que hay entre ellos y es mas facil a la hora de leer el codigo. Normalmente se usa de 2 a 4 espacios. 
+En VSC podemos ver en la seccion de abajo que dice, por ejemplo, Space=4 y hacemos click en "Indent Using Spaces" y luego seleccionamos cuantos espacios queremos usar. 
+
+
+ESPECIFICAR EL IDIOMA EN HTML: Para especificar el idioma en la pagina, que es muy util para mejorar la accesibilidad en la pagina, se recomienda siempre incluirlo. Dentro de la etiqueta de apertura <html> vamos a agregar un ATRIBUTO, un atributo basicamente especifica algo de un elemento, en este caso vamos a especificar el idioma de los elementos dentro del elemento raiz, se escribe <html lang="es">, el atributo es lang y el valor que le asignamos a ese atributo se escribe entre comillas, y el valor que le asignamos es "es" porque es el codigo que le asignamos al idioma español en los estandares web y estandares internacionales.
+Se puede buscar en Wikipedia el codigo que se le asigna a cada pais. 
+
+CREAR ENCABEZADOS:
+
+Dentro del body, podemos crear un encabezado con la etiqueta  <h1></h1>. Hay h1 hasta h6 y el texto va disminuyendo su tamaño progresivamente, h1 es el nivel mas grande de encabezado.Ya viene con un estilo definido y en negrita. El numero representa la importancia del encabezado. El tamaño se puede personalizar con CSS.
+
+
+CREAR PARRAFOS: 
+
+Para crear un parrafo usamos la etiqueta <p></p>
+Si se quiere guardar espacio para el texto definitivo se puede usar el Lorem Impsum que 
+genera un texto en latin con el numero de caracteres que le especifiques.
+De esta manera:
+<p>lorem200</p> 
+
+si se crean varios parrafos, hay un espacio entre parrafos que viene por defecto.
+ 
+BUSCAR LA DOCUMENTACION: 
+
+Una de las principales es la pagina de la Red de Desarrolladores de Mozilla (MDN), donde se puede buscar informacion que sera de mucha ayuda. Se puede buscar en Google como "mdn web docs". 
+
+COMENTARIOS:
+
+Son muy utiles para comentar cosas sobre el codigo o comunicarle a otro programador que tenga acceso al codigo. No afectan al resultado de la pagina solo esta disponible en el editor de codigo.
+
+Se escribe de la siguiente manera: <!--dfsdfs-->
+
+Tambien si se quiere poner, por ejemplo, una linea de codigo como comentario, se puede usar seleccionar la linea y apretar Ctrl + /.
+
+ELEMENTO MAIN:
+
+Main en español significa Principal, esta etiqueta va a comunicarle al navegador donde está ubicado el contenido principal de la pagina.
+Se escribe: <main></main>
+
+Segun MDZ:
+
+El elemento HTML main representa el contenido principal de body de un documento o aplicacion. El area principal del contenido consiste en el contenido que está directamente relacionado, o se expande sobre el tema central de un documento o la funcionalidad central de una aplicacion.
+No debe haber mas de un elemeno main en un documento y este no debe ser descendiente de un elemento article, aside, footer, header o nav. 
+
+IMAGENES Y ATRIBUTOS:
+
+Se usa la etiqueta img, que es una self closing tag, es decir no necesita etiqueta de cierre.
+Hay que especificar con un atributo la direccion donde está esa imagen. Por ejemplo, si la imagen esta en la web usamos el atributo src="" y entre las comillas escribimos la direccion.
+Otro atributo importante es el atributo alt, que es una descripcion alternativa para la imagen que se va a presentar si, por ejemplo, si la imagen no se descarga completamente o si el usuario esta usando un lector de pantalla para darle mayor accesibilidad a los usuarios.
+
+Para utilizar una imagen que esta en el escritorio, hay que especificar el directorio de dicha imagen en el editor de codigo. En el atributo src indicamos la direccion por ejemplo img src="lasana.jpg"se agregaria la imagen si ella se encontrara en la misma carpeta que esta nuestro archivo html. Si la imagen esta en otra carpeta hay que escribir img src="imagenes/lasana.jpg".
+
+CREAR ENLACES EXTERNOS:
+
+En HTML los enlaces se crean usando la etiqueta <a> que proviene de anchor en ingles. 
+Se puede convertir, por ejemplo, una parte del texto en un enlace, por ejemplo:
+
+<p>Haz click aquí para ver mas <a href="https://www.whiskas.com.ar/">imagenes de gatos.</a></p>
+
+
+Si queremos que el enlace se abra en una pestaña nueva se debe agregar otro atributo llamado target: target="_blank"
+
+Por motivos de seguridad tambien se aconseja usar el atributo rel con el valor "noopener noreferrer", esto nos permite prevenir un ataque llamado Tabnabbing en el cual la pestaña de origen se reemplaza para que el usuario ingrese sus datos y es un ataque a la seguridad del usuario. 
+
+rel="noopener noreferrer"
+
+ENLACES A SECCIONES INTERNAS
+
+Tambien se pueden crear enlaces internos dentro de nuestra pagina y tambien podemos convertir imagenes en enlaces.
+
+Por ejemplo, si queremos ir a un titulo de nuestra pagina, debemos escribir los enlaces como etiquetas "a" y en el atributo href colocamos un "#" que se usa para poner en enlace que no te llevan a ningun lado, solamente estan alli para mostrar al usuario que es un enlace, es muy util en el proceso de desarrollo. En ingles estos enlaces se llaman "Dead Links".
+
+Para asignarle por ejemplo, el titulo al que queremos ir, a ese elemento hay que agregarle un atributo id, que es unico para ese elemento. Por ejemplo, si queremos que el enlace nos lleve a un elemento h3 especifico: 
+
+ <h3 id="parrafo-1">Parrafo 1</h3>
+
+Ahora para convertir el enlace en un enlace interno en la etiqueta a agregamos en el atributo href el valor "#parrafo-1"
+
+<a href="#parrafo-1">Parrafo 1</a>
+
+ENLACES CON IMAGENES
+
+Para transformar una imagen en un enlace lo unico que hay que hacer es rodearla con etiquetas "a" y le asignamos el destino como un atributo en el href.
+
+<a href="https://www.elmundodelgato.com/">
+        <img
+          src="https://bit.ly/fcc-relaxing-cat"
+          alt="un gatito naranja acostado mirando a la camara"
+      /></a>
+
+CREAR ENLACES CON #
+
+Para crear dead links o links que no llevan a ningun lado simplemente hay que poner # en el href.  
+
+LISTAS NO ORDENADAS
+
+Cuando creemos estas listas vamos a ver viñetas para cada uno de los elementos de esa lista. 
+Para crearla se usa el elemento "ul" que proviene del ingles "Unorderer List" que significa lista no ordenada. 
+Cuando creamos este elemento se debe especificar cada uno de los elementos de la lista con el elemento "li", que en ingles significa List Item:
+
+ <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+ </ul>
+
+
+LISTAS ORDENADAS
+
+Para estas listas cada item tiene un numero especifico. Se usa el elemento ol que proviene del ingles "ordered list" o lista ordenada. El elemento li se mantiene. 
+
+  <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+   </ol>
+
+ETIQUETA STRONG:
+
+Es para hacer que cierta parte del texto se presente en negrita. Usamos strong para indicar que el texto es importante. 
+
+<p>Cosas que los gatos <strong>odian:</strong></p>
+
+TEXTO EN CURSIVA:
+
+Usamos la etiqueta "em", se usa para resaltar o enfatizar partes del texto.
+
+TEXTO TACHADO:
+
+Se usa la etiqueta "S" que significa "Strikethrough" 
+
+LINEA HORIZONTAL:
+
+Se pueden usar para separar parrafos. Se agrega con la etiqueta hr, que proviene del ingles Horizontal Rule. Podemos cambiar su aspecto con CSS. No requiere de etiqueta de cierre.
+
+FORMULARIOS:
+
+Para crear elementos que representen a un formulario en nuestra pagina usamos la etiqueta Form. Aqui necesitamos etiqueta de apertura y cierre porque los elementos que formen parte del formulario estan contenidos dentro de ellas. Un elemento que podemos tener dentro es un elemento input, es un elemento que se usa para obtener un valor o una respuesta por parte del usuario, por ejemplo al elemento input le podemos agregar un atributo type="text" en el que se espera que la respuesta por parte del usuario sea de tipo texto. Al form le podemos agregar un atributo action que representa la direccion en el servidor de el programa que va a manejar esos datos.
+Tambien se pueden agregar botones con la etiqueta Button para, por ejemplo, enviar los datos rellenados al que se le asigna un atributo de tipo "submit", que significa Enviar. 
+
+
+<form action="/enviar-respuesta">
+        <input type="text" name="" id="">
+        <button type="submit">Enviar</button>
+</form>
+
+
+TEXTO MARCADOR DE POSICION:
+
+Se puede agregar un texto que le sirva de guia al usuario para que sepa que tiene que completar en la casilla del formulario, esto se conoce como placeholder, el cual es un atributo. Lo agregaremos en el elemento input.
+
+CREAR UN CAMPO OBLIGATORIO:
+
+En muchos casos se necesita que los campos de los formularios no se encuentren vacios, entonces se puede generar un aviso que le avise al usuario que falta rellenar un campo antes de que el formulario pueda ser enviado. Esto lo hacemos con un atributo llamado "required", este atributo no necesita ningun valor.
+
+BOTONES DE RADIO: 
+
+Es otro valor que puede recibir el atributo "type" dentro del elemento input. Seria type="radio", esto nos permite crear un boton de radio o un boton de opcion. El texto que corresponde a ese boton de radio se aplica luego del cierre de la etiqueta input, tal que asi:
+
+<input type="radio" name="" id="">Interior
+
+
+**recordar que el elemento input no requiere etiqueta de cierre**
+
+Si queremos que las casillas se marquen cuando tambien se clickea el texto, lo cual es muy util para accesibilidad y dispositivos Touch, esto se puede lograr con una etiqueta llamada Label, con esta etiqueta hay que rodear al elemento input.
+
+De tal manera: 
+
+<label><input type="radio">Interior</label>
+
+Algo util, es que se puede relacionar aun mas la etiqueta Label con el boton de radio con el atributo for, al label se le puede asignar un valor que debe ser igual atributo id del elemento inputo.
+
+De tal manera:
+
+<label for="exterior"><input type="radio" id="exterior">Exterior</label>
+
+ 
+Esto basicamente lo que hace es conectar esa opcion con la etiqueta Label.
+
+
+GRUPO DE BOTONES DE RADIO
+
+Para seleccionar una opcion a la vez se pueden utilizar los grupos de botones de radio, para crear un grupo de botones de radio, lo que hacemos es comunicarle al navvegador que esos botones pertenecen a la misma categoria o grupo de elementos y que solo uno pueda marcarse a la vez, para lograr esto solo hay que agregar un atributo al elemento input de tipo radio llamado name. Entonces todos los elementos input de tipo radio que tengan el mismo nombre o "name" van a pertenecer al mismo grupo asi que solo uno puede ser marcado.
+
+<label for="exterior"><input type="radio" id="exterior" name="interior-exterior">Exterior</label>
+
+SALTO DE LINEA
+
+Si queremos ubicar los elementos en distintas lineas, utilizaremos el salto de linea, hay ciertos elementos como las imagenes o las listas que ya se presentan en sus propias lineas individuales, pero otros elementos no. Para especificar que cada elemento este en una linea se utiliza la etiqueta "br", viene de la palabra en ingles Break que significa como romper o separar. No requiere etiqueta de cierre.
+
+CASILLAS DE VERIFICACION:
+
+En ingles una casilñla de verificacion se denomina CheckBox. Se usa el mismo tipo de elemento, es decir, Input y le agregamos el atributo type con el valor "checkbox".Tambien se puede usar la etiqueta label para que el texto tambien funcione como un click. Recordar usar el for y el id.
+
+Se puede agregar el atributo name en las checkbox pero en estos su comportamiento no cambia.
+Ya que en este tipo de casilla se permite la seleccion multiple.
+
+ATRIBUTO CHECKED:
+
+Algo tambien para la experiencia del usuario es marcar una opcion por defecto, esto se hace con el atributo Checked, tambien se puede usar en los botones de radio. Simplemente se agrega la palabra checked a la opcion deseada.
+
+ATRIBUTO VALUE: 
+
+Es para enviar un valor especifico al servidor cuando se envien los datos del formulario. Si no especificamos el valor, el servidor va a recibir un valor generico. Se agrega el atributo value con el valor dadado a la etiqueta input. 
+
+ELEMENTOS DIV:
+
+Es un contenedor que se puede utilizar para cualquier proposito. Se usa para crear estructuras mas complejas en las paginas web. Con este elemento podemos agrupar elementos para darle un estilo luego con CSS.
+
+PIE DE PAGINA:
+
+Se puede agregar un pie de pagina luego del elemento main, ya que no forma parte del contenido principal de la pagina. El elemento se llama footer.
+
+SMALL: 
+
+Esta etiqueta nos permite que el texto sea mas pequeño y se representa con Small. 
+
+HEAD: 
+
+Normalmente se escribe antes de Body, head contiene lo que normalmente llamaos "metadata" y los elementos que actuan detras de escena, elementos que no vemos pero que son esenciales como por ejemplo, si creamos un archivo css o js y necesitamos incluirlo en la pagina, tambien si queremos personalizar el titulo de la pagina se hace por aqui con la etiqueta Title. 
+
+
+---------------------------------------------------------------------------------
+
+CSS:
+
+En este archivo definimos el estilo de la pagina. Es un lenguaje basado en reglas. Esas reglas determinaran el estilo que se aplicara a un elemento o a un grupo de elementos. 
+
+3 OPCIONES PARA CSS:
+
+Tenemos tres estilos para escribir el codigo en CSS, la primera opcion es escribir estilos en linea, usar un bloque style o escribir un archivo de tipo .css 
+
+
+ESTILOS EN LINEA: 
+
+El estilo se añade directamente a la etiqueta de apertura del elemento HTML.
+
+x ej dentro de un h2, escribimimos el atributo style="color: blue" 
+
+BLOQUE STYLE:
+
+Añadimos el elemento style en head para describir el estilo. Por ejemplo,
+ 
+<head>
+<style>
+h2 (esto es un selector CSS, quiere decir que para todas las etiquetas h2 que haya en el codigo, se aplicara el siguiente estilo) {
+color: blue:
+}
+</style>
+ 
+ARCHIVO .CSS
+
+Creamos un archuvo de tipo .css para definir el estilo de la pagina. Basicamente tenemos un archivo html y un archivo css. Se vincula el archivo css con el html. Esta es la opcion recomendada, ya que es un archivo separado y es mas facil de mantener y expandir. 
+
+Para esto hay que crear un archivo, por defecto podemos llamarlo "style.css" tambien lo llaman "main.css" o "styles.css". 
+Para conectar el archivo HTML con el css , se usa el elemento link. De esta manera:
+<link rel="stylesheet" href="style.css"> el atributo rel (que proviene de relationship) nombra una relacion del elemento vinculado al elemento actual, seria como preguntarse ¿que representa el archivo css para el archivo html? y el valor o respuesta es "hoja de estilo o stylesheet". El elemento link no tiene etiqueta de cierre.
+
+SELECTORES CSS:
+
+Los selectores especifica el conjunto de elemento o el tipo de elemento al cual se le va a aplicar ese estilo. hay distintos tipos:
+
+Selector de tipo: selecciona todos los elementos que coinciden con el nombre del elemento especificado
+
+Selector de clase: Selecciona todos los elemenntos que tienen el atributo class especificado
+
+Selector de id
+
+Selector universal: Selecciona todos los elementos, se escribe con *
+
+Selector de atributo
+
+SELECTORES DE CLASE: 
+
+Selecciona todos los elemenntos que tienen el atributo class especificado.
+
+En HTML seria: <ol class="lista-de-gatos">
+En CSS: .lista-de-gatos {
+  color: chocolate;
+}
+
+**SE PUEDE ASIGNAR MAS DE UNA CLASE AL MISMO ELEMENTO**
+
+
+TAMAÑO DE FUENTE:
+Se usa la propiedad font-size y hay distintas unidades para especificar, una de las mas usadas es px (pixeles)
+
+FAMILIAS TIPOGRAFICAS:
+
+Para cambiar el tipo de fuente usamos la propiedad font-family, la cual define una lista de fuentees con un orden de proridad para utilizar en un elemento seleccionado, a diferencia de la mayoria de las propiedades de CSS, los valores se sepran con comas para indicar que son valores alternativos.
+Se le asigna un valor que puede no estar entre comillas si es una sola palabra pero en por ejemplo "Times New Roman",es conveniente usarlas.
+
+GOOGLE FONTS:
+
+Se pueden utilizar fuentes directamente de google fonts, primero elegimos una con el boton "select this style" y copiamos el elemento link que podemos pegar en el elemento HTML que pegaremos en el elemento head. Tambien en el CSS se pega el font family generado.
+Podemos agregar mas fuentes que usaremos y luego el codigo sirve para todas las que hayamos agregado.
+
+ESPECIFICA COMO DEBEN DEGRADARSE LAS FUENTES: 
+
+Cuando usamos google fonts, ese tipo de fuente se descarga de internet y digamos que internet falla o ese tipo ya no existe, entonces se utiliza el tipo de fuente despues de la coma como respaldo, y con el tercer tipo es exactamente lo mismo. Todas separadas con coma y con orden de prioridad de derecha a izquierda.
+
+CAMBIAR EL TAMAÑO DE LAS IMAGENES: 
+
+Existe una propiedad para modificar el ANCHO de la imagen que se llama WIDTH, el cual tambien tiene varias unidades. La imagen si se usa esa propiedad sola va a mantener sus dimensiones.
+
+AÑADE BORDES ALREDEDOR DE UN ELEMENTO:
+
+Hay tres propiedades muy importantes. La primera es border-width que seria el "ancho del borde del elemento" , cuanto mayor es el valor que le asignemos mas ancho sera el borde. 
+Otra propiedades el border-color, el cual le asigna un color al borde creado, y el border-style en el cual se le asigna un estilo, puede ser solid que es el color entero, por ejemplo, tambien existe none que significa que se quiten todos los bordes que existan en el elemento, otro es dotted que es puntiado, o dashed que son pequeñas lineas, double es como un doble borde, groove es como un surco o da la impresion de que tenga como un fondo profundo, ridge significa cresta y es como que da relieve, inset u outset tambien existen.
+
+Tambien se puede personalizar cada lado del borde, uno puede ser solid y el otro dashed por ejemplo. Si escribimos un solo valor se aplica para todos los bordes, si aplicamos dos el primero se aplica para arriba y abajo y el segundo para los lados. Si esrcibimos tres valores, se aplica en los lados y abajo. Si se asignan los cuatro se aplican el orden de las agujas del reloj (arriba, derecha, abajo, izquierda).
+
+BORDES REDONDEADOS:
+
+Se hace con la propiedad border-radius cuanto mayor es el valor mayor es el efecto. Tambien se puede especificar con %. Para hacer, por ejemplo, que la imagen sea un circulo usariamos un valor cercano al  50%, esto funciona en imagenes cuadradas. 
+
+COLOR DE FONDO DE UN DIV:
+
+Es muy util estilar los div ya que se puede aplicar el mismo estilo a todos los elementos que ese div contenga. Se usa la propiedad para cambiar el color de fondo que es background-color.
+
+ATRIBUTO ID EN CSS:
+
+Sirve para aplicar estilos a un elemento especifico. EN html se agrega como un atributo y en el CSS en vez de poner "." ponemos un "#".
+
+PADDING: 
+
+El padding es la distancia que hay entre el borde de un elemento HTML y su contenido. Por defecto por ejemplo, si tenemos una imagen dentro de un div, la imagen se ubica en la esquina superior izquierda del div. El padding es como el margen interno de un elemento, es la distancia entre el contenido y su borde. 
+Se le puede asignar un padding distinto a cada uno de los lados del elemento usando las propiedades padding-left, padding-right, pading-top o padding-bottom. Hay una forma mas concisa de especificar esto, poniendo todo en una sola linea.
+
+PADDING EN UNA LINEA:
+
+Para especificar el padding de cada lado del elemento en una sola linea, solo debemos escribir padding y luego especificar los valores en el sentido de las agujas del reloj, comenzando con el borde superior, derecha, borde inferior, izquierda. 
+
+MARGEN:
+
+Es la distancia entre el borde de un elemento y el borde de otros elementos, es basicamente la forma en la que vamos a separar distintos elementos. 
+
+AJUSTA EL MARGEN: 
+
+Al igual que en el padding podemos especificar algun margen con por ejemplo margin-top o especificar todos usando solo la propiedad margin y los valores tambien en el sentido de las agujas del reloj.
+
+SELECTORES DE ATRIBUTO:
+
+Los elementos pueden tener atributos que proporcionan un nivel de detalle mayor sobre el elemento que delimitan. En el CSS puedes utilizar selectores de atributo para seleccioar elementos definidos con unos atributos determinados.
+Selectores de presencia y valor: Estos selectores permiten seleccionar un elemento solo a partir de la presencia de un atributo (por ejemplo href) o a partir de varias coincidencias diferentes con respecto al valor del atributo: EJEMPLOS. a[title] cuando usamos este selector solo vamos a seleccionar los elementos a que tengan el atributo title, otro ejemplo seria a[atributo=value] es decir que tengan un atributo pero que ademas tenga un valor especifico. 
+
+UNIDADES ABSOLUTAS Y RELATIVAS:
+
+Unidades absolutas:No son relativas a nada mas, en general se considera que siempre tienen el mismo tamaño. Aca encontramos: px, por ejemplo.
+
+Unidades relativas:
+vw: Significa viewport. Depende del tamaño de la pantalla o del navegador.Representa 1% del ancho de la ventana grafica. Por ejemplo si ponemos 20vw representaria el 20% del ancho de la ventana del navegador.
+vh: representa 1% de la altura de la ventana grafica.
+EM.Depende del tamaño de la letra del contenedor o del elemento padre. Entonces, es relativo al tamaño del texto. Si aumentamos el tamaño de la letra, aumenta en esa misma proprocion el ancho de la caja. Tambien se puede usar esta unidad como una forma de reajustar el tamaño de la letra de los elementos internos, por ejemplo si tenemos el tamaño de la propiedad font-size definido con esta unidad, estamos diciendo que el tamaño de la unidad es esa x cantidad de veces el tamaño de su contenedor. Por ejemplo, si tenemos definido el tamaño de la letra 5px y luego definimos font-size con 1.5em decimos que el tañao de la letra es 1.5 veces del tamaño del contenedor(5px).
+
+La ventaja de usar unidades relativas es que con una planificacion cuidadosa puedes lograr que el tamaño del texto u otros elementos escalen en relacion con todo lo demas en la pagina.
+
+APLICAR ESTILO A BODY:
+
+Se puede aplicar un fondo usando la propiedad background-color. Si aplicamos un estilo se aplica a todos los elementos que pertenezcan a body.
+
+PRIORIZA UN ESTILO SOBRE OTRO:
+
+A medida que vayamos creando estructuras mas complejas frecuentemente vamos a necesitar varios estilos a un mismo elemento, por eso es importante saber como se priorizan esos estilos. Por ejemplo,si le asigno dos clases a un elemento h1, lo cual se puede hacer aplicando espacios en el atributo class entre las dos clases. El que tiene prioridad si se repite el mismo estilo es la ultima que esribas en el archivo css o en el orden en el que aparezca, porque el estilo se lee de arriba a abajo y se queda con el ultimo valor asignado a esa propiedad.
+Si agregamos la misma propiedad a un elemento a x ejemplo y a la clase de ese elemento, no importa el orden en el que se escriba, el codigo escrito en la clase SIEMPRE tendra prioridad. Si asignamos un estilo sobre un ID va a tener SIEMPRE prioridad versus el estilo aplicado en una CLASE.
+Si aplicamos un atributo style en HTML, este va a priorizarse sobre el ID y la Clase.
+
+Hay una forma de cambiar ese comportamiento que hay por defecto se puede agregar junto con el valor por ejemplo blue y escribir importante. asi: color: blue !important
+
+CODIGOS HEXADECIMALES EN COLORES:
+
+Tiene seis digitos y comienza con #, y cada uno estaen tre 0 y 9 y entre A y F. Los dos primeros digitos es rojo, los otros dos es verde y los ultimos dos es azul. La combinacion entre estos hacen los distintos colores.
+
+VARIABLES en CSS:
+
+Cuando agregamos dos guiones antes del nombre de la variable en CSS estamos creando una variable.  Por ejemplo, --pinguino-barriga: gray; 
+Sirve por ejemplo si queremos usar una variable muchas veces, la puedo definir una vez y luego llamarla, esto es util por si queremos modificarla luego, modificamos solo la que declaramos y listo. Para llamarla la asignamos como valor por ejemplo, background: var(--pinguino-pico) 
+
+
+VALORES DE RESPALDO:
+
+Por ejemplo, si escribimos mal el nombre de una variable y evitar errores de tipeo se pueden asignar valores de respaldo a las variables. Se escribe poniendo la variable y seguido de una coma, el respaldo. Por ejemplo:
+background:var(--pinguino-piel, black), aca coomo el respaldo es un color escribimos black.
+
+COMPATIBILIDAD CON DISTINTOS NAVEGADORES:
+
+No todos los navegadores reconocen las variables CSS, esto se soluciona con respaldos. Esto se soluciona facilmente, en lugar de poner el respaldo dentro de la variable seguida de una coma, creamos la propiedad sin variable, por ejemplo background: color arriba de la propiedad que tiene la propiedad y tambien deberiamos incluir el respaldo luego de la coma por si reconoce las variables.
+
+HEREDAR VARIABLES CSS:
+
+No necesariamente se puede usar las variables en todas las clases o selectores.
+Si no se asigna un valor a una variable en un elemento dado, se usara el valor de su elemento padre. 
+Existe una pseudo clase llamada :root donde definiriamos la variable para hacer que la variable sea global y no solo sea reconocida por los elementos dentro de una clase por ejemplo, si no que sea reconocida siempre. Root lo que hace es seleccionar el elemento HTML por lo que se va a aplicar a todo el elemento.
+Ejemplo: 
+
+:root {
+--pinguino-barriga: pink;
+}
+
+CAMBIAR VARIABLES PARA UN AREA ESPECIFICA: 
+
+Para cambiar un valor que ya habiamos definido, por ejemplo en root, podemos volver a definir esa variable dentro de otro elemento y se va a aplicar para todos sus descendientes.
+
+
+
+
+
+
+
